@@ -1,0 +1,418 @@
+@import 'responsive';
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+
+  }
+  a{
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+$dark-background-color:#1b1c31;
+$light-background-color:#222338;
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color:$dark-background-color;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mentors-layout{
+    padding: 64px 0 63px 42px;
+    display: flex;
+    gap: 20px;
+    @include responsive(smartphone-portrait){
+      flex-direction: column;
+    }
+    .mentors{
+      @extend %flex-column;
+      gap: 18px;
+      .card-wrapper{
+        @extend %flex-column;
+        gap: 32px;
+        .card-line{
+          display: flex;
+          gap: 32px;
+          @include responsive(smartphone-portrait){
+            flex-direction: column;
+          }
+          .card{
+            background-color: $light-background-color;
+            padding: 24px 24px;
+            width: 354px;
+            height: 228px;
+            border-radius: 10px;
+            @extend %flex-column;
+            gap: 20px;
+            .desc{
+              font-size: 14px;
+              font-weight: 500;
+              color: #EBEDFA;
+              opacity: 50%;
+            }
+            &__content-2{
+              display: flex;
+              justify-content: space-between;
+              
+              .content-item{
+                display: flex;
+                gap: 8px;
+                
+                p{
+                  color: #EBEDFA;
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+              }
+            }
+            &__content-1{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .followed-btn{
+                color: #54577A;
+              }
+              a{
+                color: #546FFF;
+              }
+              .profile{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+               
+                .texts{
+                  .name{
+                    font-size: 16px;
+                    font-weight:600;
+                    color: white;
+                  }
+                  .work{
+                    font-size: 12px;
+                    font-weight:400;
+                    color: #EBEDFA;
+                    opacity: 50%;
+                  }
+                }
+              }
+            }
+        }
+        
+        
+      
+      .header-title{
+        display: flex;
+        justify-content: space-between;
+        p{
+          color: white;
+          font-size: 24px;
+          font-weight: 600;
+        }
+        img{
+          width: 58px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+      .header-title{
+        p{
+          color: white;
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+    .menu-bar{
+        width: 244px;
+        height: 935px;
+        background-color: $light-background-color;
+        border-radius: 16px;
+        padding: 30px 28px;
+        @extend %flex-column;
+        gap: 58px;
+        align-items: center;
+        @include responsive(smartphone-portrait){
+          display: none;
+         }
+        .menu-list{
+            @extend %flex-column;
+            gap: 20px;
+            .blue-link{
+              background-color: #6076FF;
+              border-radius: 10px;
+              padding: 10px 20px;
+            }
+            li{
+                color: white;
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                font-size: 24px;
+                font-weight: 500;
+                text-align: left;
+            }
+        }
+    }
+    .main-content{
+      @extend %flex-column;
+      gap: 20px;
+      .header-part{
+        background-color: $light-background-color;
+        border-radius: 16px;
+        padding: 32px 32px 26px 32px;
+       width: 1114px;
+       height: 182px;
+       @extend %flex-column;
+       gap: 20px;
+       @include responsive(smartphone-portrait){
+        background-color: transparent;
+        padding: 32px 5px 10px 5px;
+       }
+        &__line-1{
+          display: flex;
+          justify-content: space-between;
+          .menu-icon{
+            display: none;
+            @include responsive(smartphone-portrait){
+              display: block;
+              width: 44px;
+              height: 44px;
+            }
+          }
+          @include responsive(smartphone-portrait){
+            justify-content:start;
+          }
+          p{
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+          }
+          .images{
+            display: flex;
+            gap: 24px;
+          }
+        }
+        .header-part__line-2{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @include responsive(smartphone-portrait){
+           justify-content: start;
+           gap: 15px;
+          }
+          .buttons{
+            .button-2{
+              background-color: transparent;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 14px 28px;
+            color: white;
+            align-items: center;
+            font-weight: 600;
+            display: none;
+            @include responsive(smartphone-portrait){
+              display: block;
+            }
+            .bx{
+              font-size: 24px;
+            }
+            }
+            .button-1{
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 14px 28px;
+            color: white;
+            align-items: center;
+            font-weight: 600;
+            @include responsive(smartphone-portrait){
+              display: none;
+            }
+            .bx{
+              font-size: 24px;
+            }
+            }
+
+          }
+          form{
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 14px 28px;
+            
+            .bx-search{
+              color: white;
+              font-size: 24px;
+              float: right;
+            }
+          }
+          input[type=text]{
+            background-color: transparent;
+            border: none;
+            
+          }
+        }
+      }
+      .recent-mentors{
+        .card-wrapper{
+          display: flex;
+          gap: 32px;
+          .card-1{
+            background-color: $light-background-color;
+            padding: 24px 24px;
+            width: 328px;
+            height: 140px;
+            border-radius: 10px;
+            @extend %flex-column;
+            gap: 20px;
+            &__content-2{
+              display: flex;
+              justify-content: space-between;
+              
+              .content-item{
+                display: flex;
+                gap: 8px;
+                
+                p{
+                  color: #EBEDFA;
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+              }
+            }
+            &__content-1{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .followed-btn{
+                color: #54577A;
+              }
+              a{
+                color: #546FFF;
+              }
+              .profile{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+               
+                .texts{
+                  .name{
+                    font-size: 16px;
+                    font-weight:600;
+                    color: white;
+                  }
+                  .work{
+                    font-size: 12px;
+                    font-weight:400;
+                    color: #EBEDFA;
+                    opacity: 50%;
+                  }
+                }
+              }
+            }
+          }
+        
+          .card{
+            background-color: $light-background-color;
+            padding: 24px 24px;
+            width: 328px;
+            height: 140px;
+            border-radius: 10px;
+            @extend %flex-column;
+            gap: 20px;
+            @include responsive(smartphone-portrait){
+              display: none;
+            }
+            &__content-2{
+              display: flex;
+              justify-content: space-between;
+              
+              .content-item{
+                display: flex;
+                gap: 8px;
+                
+                p{
+                  color: #EBEDFA;
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+              }
+            }
+            &__content-1{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .followed-btn{
+                color: #54577A;
+              }
+              a{
+                color: #546FFF;
+              }
+              .profile{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+               
+                .texts{
+                  .name{
+                    font-size: 16px;
+                    font-weight:600;
+                    color: white;
+                  }
+                  .work{
+                    font-size: 12px;
+                    font-weight:400;
+                    color: #EBEDFA;
+                    opacity: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .header-title{
+          display: flex;
+          justify-content: space-between;
+          p{
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+          }
+          img{
+            width: 58px;
+            height: 24px;
+          }
+        }
+      }
+    }
+}

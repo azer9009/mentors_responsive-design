@@ -1,0 +1,451 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mentors-layout .main-content .recent-mentors .card-wrapper .card, .mentors-layout .main-content .recent-mentors .card-wrapper .card-1, .mentors-layout .main-content .header-part, .mentors-layout .main-content, .mentors-layout .menu-bar .menu-list, .mentors-layout .menu-bar, .mentors-layout .mentors .card-wrapper .card-line .card, .mentors-layout .mentors .card-wrapper, .mentors-layout .mentors {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #1b1c31;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mentors-layout {
+  padding: 64px 0 63px 42px;
+  display: flex;
+  gap: 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout {
+    flex-direction: column;
+  }
+}
+.mentors-layout .mentors {
+  gap: 18px;
+}
+.mentors-layout .mentors .card-wrapper {
+  gap: 32px;
+}
+.mentors-layout .mentors .card-wrapper .card-line {
+  display: flex;
+  gap: 32px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .mentors .card-wrapper .card-line {
+    flex-direction: column;
+  }
+}
+.mentors-layout .mentors .card-wrapper .card-line .card {
+  background-color: #222338;
+  padding: 24px 24px;
+  width: 354px;
+  height: 228px;
+  border-radius: 10px;
+  gap: 20px;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card .desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: #EBEDFA;
+  opacity: 50%;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-2 .content-item {
+  display: flex;
+  gap: 8px;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-2 .content-item p {
+  color: #EBEDFA;
+  font-size: 14px;
+  font-weight: 500;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-1 .followed-btn {
+  color: #54577A;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-1 a {
+  color: #546FFF;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-1 .profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-1 .profile .texts .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.mentors-layout .mentors .card-wrapper .card-line .card__content-1 .profile .texts .work {
+  font-size: 12px;
+  font-weight: 400;
+  color: #EBEDFA;
+  opacity: 50%;
+}
+.mentors-layout .mentors .card-wrapper .card-line .header-title {
+  display: flex;
+  justify-content: space-between;
+}
+.mentors-layout .mentors .card-wrapper .card-line .header-title p {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+.mentors-layout .mentors .card-wrapper .card-line .header-title img {
+  width: 58px;
+  height: 24px;
+}
+.mentors-layout .mentors .header-title p {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+.mentors-layout .menu-bar {
+  width: 244px;
+  height: 935px;
+  background-color: #222338;
+  border-radius: 16px;
+  padding: 30px 28px;
+  gap: 58px;
+  align-items: center;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .menu-bar {
+    display: none;
+  }
+}
+.mentors-layout .menu-bar .menu-list {
+  gap: 20px;
+}
+.mentors-layout .menu-bar .menu-list .blue-link {
+  background-color: #6076FF;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.mentors-layout .menu-bar .menu-list li {
+  color: white;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+.mentors-layout .main-content {
+  gap: 20px;
+}
+.mentors-layout .main-content .header-part {
+  background-color: #222338;
+  border-radius: 16px;
+  padding: 32px 32px 26px 32px;
+  width: 1114px;
+  height: 182px;
+  gap: 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part {
+    background-color: transparent;
+    padding: 32px 5px 10px 5px;
+  }
+}
+.mentors-layout .main-content .header-part__line-1 {
+  display: flex;
+  justify-content: space-between;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+.mentors-layout .main-content .header-part__line-1 .menu-icon {
+  display: none;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part__line-1 .menu-icon {
+    display: block;
+    width: 44px;
+    height: 44px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part__line-1 {
+    justify-content: start;
+  }
+}
+.mentors-layout .main-content .header-part__line-1 p {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+.mentors-layout .main-content .header-part__line-1 .images {
+  display: flex;
+  gap: 24px;
+}
+.mentors-layout .main-content .header-part .header-part__line-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part .header-part__line-2 {
+    justify-content: start;
+    gap: 15px;
+  }
+}
+.mentors-layout .main-content .header-part .header-part__line-2 .buttons .button-2 {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 14px 28px;
+  color: white;
+  align-items: center;
+  font-weight: 600;
+  display: none;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part .header-part__line-2 .buttons .button-2 {
+    display: block;
+  }
+}
+.mentors-layout .main-content .header-part .header-part__line-2 .buttons .button-2 .bx {
+  font-size: 24px;
+}
+.mentors-layout .main-content .header-part .header-part__line-2 .buttons .button-1 {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 14px 28px;
+  color: white;
+  align-items: center;
+  font-weight: 600;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part .header-part__line-2 .buttons .button-1 {
+    display: none;
+  }
+}
+.mentors-layout .main-content .header-part .header-part__line-2 .buttons .button-1 .bx {
+  font-size: 24px;
+}
+.mentors-layout .main-content .header-part .header-part__line-2 form {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 14px 28px;
+}
+.mentors-layout .main-content .header-part .header-part__line-2 form .bx-search {
+  color: white;
+  font-size: 24px;
+  float: right;
+}
+.mentors-layout .main-content .header-part .header-part__line-2 input[type=text] {
+  background-color: transparent;
+  border: none;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper {
+  display: flex;
+  gap: 32px;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1 {
+  background-color: #222338;
+  padding: 24px 24px;
+  width: 328px;
+  height: 140px;
+  border-radius: 10px;
+  gap: 20px;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-2 .content-item {
+  display: flex;
+  gap: 8px;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-2 .content-item p {
+  color: #EBEDFA;
+  font-size: 14px;
+  font-weight: 500;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-1 .followed-btn {
+  color: #54577A;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-1 a {
+  color: #546FFF;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-1 .profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-1 .profile .texts .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card-1__content-1 .profile .texts .work {
+  font-size: 12px;
+  font-weight: 400;
+  color: #EBEDFA;
+  opacity: 50%;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card {
+  background-color: #222338;
+  padding: 24px 24px;
+  width: 328px;
+  height: 140px;
+  border-radius: 10px;
+  gap: 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .recent-mentors .card-wrapper .card {
+    display: none;
+  }
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-2 .content-item {
+  display: flex;
+  gap: 8px;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-2 .content-item p {
+  color: #EBEDFA;
+  font-size: 14px;
+  font-weight: 500;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-1 .followed-btn {
+  color: #54577A;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-1 a {
+  color: #546FFF;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-1 .profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-1 .profile .texts .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.mentors-layout .main-content .recent-mentors .card-wrapper .card__content-1 .profile .texts .work {
+  font-size: 12px;
+  font-weight: 400;
+  color: #EBEDFA;
+  opacity: 50%;
+}
+.mentors-layout .main-content .recent-mentors .header-title {
+  display: flex;
+  justify-content: space-between;
+}
+.mentors-layout .main-content .recent-mentors .header-title p {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+.mentors-layout .main-content .recent-mentors .header-title img {
+  width: 58px;
+  height: 24px;
+}
+/*# sourceMappingURL=main.css.map */
