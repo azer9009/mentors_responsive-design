@@ -323,6 +323,18 @@ body {
 .mentors-layout .main-content .header-part .header-part__line-2 input[type=text] {
   background-color: transparent;
   border: none;
+  width: 480px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .mentors-layout .main-content .header-part .header-part__line-2 input[type=text] {
+    width: 200px;
+  }
 }
 .mentors-layout .main-content .recent-mentors .card-wrapper {
   display: flex;

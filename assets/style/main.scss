@@ -279,7 +279,10 @@ body{
           input[type=text]{
             background-color: transparent;
             border: none;
-            
+            width: 480px;
+            @include responsive(smartphone-portrait){
+              width: 200px;
+            }
           }
         }
       }
